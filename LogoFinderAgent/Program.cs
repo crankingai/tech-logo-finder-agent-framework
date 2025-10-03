@@ -20,6 +20,10 @@ var chatOptions = new ChatOptions
    AIFunctionFactory.Create(
        ImageValidator.IsValidImageUrl,
        new AIFunctionFactoryOptions { Description = "Validates if the URL resolves to a valid image matching its extension (svg, png, jpg, jpeg)" }
+   ),
+   AIFunctionFactory.Create(
+       ImageSuperResolver.ResolveAsync,
+       new AIFunctionFactoryOptions { Description = "Resolves a final direct image URL from a page or URL; extracts og:image/img tags and falls back to Internet Archive if needed" }
    )], // register functions as tools
    
 };

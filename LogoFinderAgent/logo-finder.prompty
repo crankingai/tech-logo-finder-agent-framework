@@ -29,7 +29,7 @@ Given a brand, project, product, or property name repository like 'Python' or 'S
 1. Use available tools to search the web, find the URL to a logo for the technology brand, project, product, or property.
 2. For search results that are web pages, be sure to extract the URL of images and validate all plausible matches. For example, https://en.m.wikipedia.org/wiki/File:Microsoft_.NET_logo.svg is a page that contains https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg within.
 3. Use available tools to validate the URL points to a valid logo image.
-4. For logo images that can't be assessed because the origin server returns an HTTP status of Forbidden, try checking the wayback machine on the Internet Archive.
+4. If there are multiple available images, prefer one from strongly brand-associated domain and that most resembles that brand's known logo.
 5. Give as a response the logo image URL, a description of the logo, and a mention of the technology brand, project, product, or property formatted in accessible HTML.
 
 If you cannot find a logo at first, keep trying, but after {{max_retry_attempts}} failed attempts return an error message and mention how many logos were considered.
